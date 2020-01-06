@@ -1,0 +1,1 @@
+在collection的request中，新建一个全局变量（或环境变量）
