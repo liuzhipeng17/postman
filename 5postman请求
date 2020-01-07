@@ -1,0 +1,32 @@
+https://www.jianshu.com/p/66c68e9f0cba
+https://learning.getpostman.com/docs/postman/sending-api-requests/requests/
+
+#1 设置url
+   请求：https://api-test-fun.glitch.me/info
+   base URL: https://api-test-fun.glitch.me
+   endpoint: /info
+
+#2 设置method
+   常用的四种方法：
+   POST—add new data
+   PUT—replace existing data
+   PATCH—update some existing data fields
+   DELETE—delete existing data
+   
+   比如，待办列表的应用，get是获取任务的当前列表，post创建一个任务，put、patch是编辑一个已存在的任务。
+
+#3 设置params
+   
+   可通过url和 params tab来设置参数（路径参数和查询参数）
+   
+   1）查询参数：在请求后面跟着?key=value来设置,多个参数使用&， 比如?id=1&type=new
+   2）路径参数：在参数前加冒号, /customer/:id
+   
+   参数不会自动url编码，右键选中从那时起，选择EncodeURIComponent手动编码参数值
+   3）输入路径参数，是在url输入/:id，会自动在Params添加一个Path params，此时可以设置path 参数值
+   
+#4 设置body
+  
+    可在body tab里面指定待发送的数据，可发送多中类型的数据。
+    1）如果发送数据，必须在请求头Content-Type指定内容的格式，只有这样API才能正确处理接收的数据
+    
