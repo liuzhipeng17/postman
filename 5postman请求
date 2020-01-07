@@ -27,6 +27,16 @@ https://learning.getpostman.com/docs/postman/sending-api-requests/requests/
    
 #4 设置body
   
-    可在body tab里面指定待发送的数据，可发送多中类型的数据。
-    1）如果发送数据，必须在请求头Content-Type指定内容的格式，只有这样API才能正确处理接收的数据
+    发送Http请求时，一般会指定数据的类型（在请求头Content-Type)，服务器根据Content-Type来解析数据。
+    1）对于表单form-data 和urlencoded数据，Postman会自动在附上正确的请求头Content-Type
+    2) 对于raw类型的数据，postman会根据你选择的类型（text, json等)来设置一个请求头
+    3) 手动设置Content-Type，优先级比postman设置的高
+    4）body是二进制类型的数据，postman不会设置header
+    
+    默认，如果你不需要发送body，body类型为None, 可以选择发送的数据类型有form data, url-encoded, raw, binary, GraphQL
+  
+ #5 form-data表单数据
+    1) Content-Type:multipart/form-data
+       对于这种类型的数据，常见的场景是前端页面上传个人
+    
     
